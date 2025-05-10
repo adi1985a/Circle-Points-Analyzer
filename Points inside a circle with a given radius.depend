@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1678223289 source:c:\users\hp\desktop\programy na github\c++\programs\study assignment (5)\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<cstdlib>
+	<cmath>
+	<iomanip>
+
+1678226889 source:c:\users\hp\desktop\portfolio programy na github\c++\programs\points inside a circle with a given radius\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<cstdlib>
+	<cmath>
+	<iomanip>
+
