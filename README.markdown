@@ -21,6 +21,8 @@ _A C++ console application for generating random 2D points and analyzing how man
 
 **CirclePoint Analyst Pro** is an engaging C++ console application designed to explore the distribution of randomly generated 2D points relative to a circle centered at the origin. Users can specify the number of points to generate and the radius of the circle. The program then calculates the distance of each point from the origin and determines how many fall within the circle's boundary. Results, including the coordinates and distances of points inside the circle, are saved to `result.txt`. The application features a colorful user interface and basic error handling, making it a neat tool for visualizing simple geometric probability or Monte Carlo method concepts.
 
+![Demo GIF](screenshots/1.gif)
+
 ## ✨ Key Features
 
 *   ✨ **Random Point Generation**: Creates a user-specified number of 2D points with random `x` and `y` coordinates (within a predefined range).
@@ -34,9 +36,14 @@ _A C++ console application for generating random 2D points and analyzing how man
 
 ## 🖼️ Screenshots
 
-**Coming soon!**
+_Screenshots showcasing the main menu, input prompts for point generation and radius, the summary of points inside the circle, and an example of the `result.txt` file content._
 
-_This section will be updated with screenshots showcasing the main menu, input prompts for point generation and radius, the summary of points inside the circle, and an example of the `result.txt` file content._
+<p align="center">
+  <img src="screenshots\1.jpg" width="300"/>
+  <img src="screenshots\2.jpg" width="300"/>
+  <img src="screenshots\3.jpg" width="300"/>
+  <img src="screenshots\4.jpg" width="300"/>
+</p>
 
 ## ⚙️ System Requirements
 
