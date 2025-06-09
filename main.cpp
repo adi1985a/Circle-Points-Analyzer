@@ -106,12 +106,31 @@ void displayProgramInfo() {
     cin.get();
 }
 
+void drawAsciiCircle() {
+    Colors::setColor(Colors::CYAN);
+    cout << "\n";
+    cout << "        ***#######***        \n";
+    cout << "     **###############**     \n";
+    cout << "   **###################**   \n";
+    cout << "  *#######################*  \n";
+    cout << " *#########################* \n";
+    cout << " *#########################* \n";
+    cout << " *#########################* \n";
+    cout << "  *#######################*  \n";
+    cout << "   **###################**   \n";
+    cout << "     **###############**     \n";
+    cout << "        ***#######***        \n";
+    Colors::setColor(Colors::WHITE);
+}
+
 void generateAndAnalyzePoints() {
     system("cls");
     Colors::setColor(Colors::MAGENTA);
     cout << "\nPoint Generation and Analysis\n";
     Colors::drawLine();
-    
+
+    drawAsciiCircle(); // Dodano wyświetlanie ASCII art koła
+
     try {
         int N;
         double R;
@@ -156,6 +175,39 @@ void generateAndAnalyzePoints() {
     cin.get();
 }
 
+void loadPointsFromFile() {
+    system("cls");
+    Colors::setColor(Colors::MAGENTA);
+    cout << "\nLoading points from file (result.txt)\n";
+    Colors::drawLine();
+
+    ifstream plik("result.txt");
+    if (!plik) {
+        Colors::setColor(Colors::YELLOW);
+        cout << "File 'result.txt' not found. No points to load.\n";
+        Colors::setColor(Colors::WHITE);
+        cout << "\nPress any key to return to menu...";
+        cin.ignore();
+        cin.get();
+        return;
+    }
+
+    string line;
+    int count = 0;
+    while (getline(plik, line)) {
+        cout << line << endl;
+        count++;
+    }
+    if (count == 0) {
+        Colors::setColor(Colors::YELLOW);
+        cout << "File is empty.\n";
+    }
+    Colors::setColor(Colors::WHITE);
+    cout << "\nPress any key to return to menu...";
+    cin.ignore();
+    cin.get();
+}
+
 int main() {
     srand(time(NULL));
     int choice;
@@ -177,7 +229,7 @@ int main() {
 
         switch (choice) {
             case 1: generateAndAnalyzePoints(); break;
-            case 2: /* TODO: Implement file loading */ break;
+            case 2: loadPointsFromFile(); break; // Dodano obsługę opcji 2
             case 3: displayProgramInfo(); break;
             case 4: return 0;
             default: continue;
